@@ -4,9 +4,6 @@ const ulEl = document.querySelector(".list")
 
 let list = JSON.parse(localStorage.getItem("list"));
 
-list.forEach(task => {
-    toDoList(task);
-});
 
 formEl.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -14,6 +11,9 @@ formEl.addEventListener("submit", (event) => {
     toDoList()
 })
 
+list.forEach(task => {
+    toDoList(task);
+});
 function toDoList(task) {
     let newTask = inputEl.value;
 
